@@ -1,38 +1,121 @@
-.App {
+body{
+  position: absolute;
+  z-index: -1;
+  background-image: url(./images/mounts.jpg);
+  object-fit: cover;
+  color: rgba(255, 255, 255,0.8);
+  background-position: cover center ;
+  /* background-repeat: no-repeat; */
+}
+
+.search{
+  width: 95vw;
+  margin: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+
+  
+}
+
+.container{
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 99vw;
+  height:85vh;
+  margin-left: 3px;
+}
+
+.it{
+  
+  border-radius: 500px;
+  padding: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255,0.2);
+}
+::placeholder{
+  font-weight: 600;
+  /* font-size: ; */
+  color: rgb(61, 58, 58,0.7);
+}
+
+.city-details{
+  max-width: 500px;
+  max-height: 500px;
+}
+.desc{
+  margin-right: 0px;
+  font-size: xx-large;
+  /* background-color: ; */
+  /* width: 100%; */
+  /* background-color: black; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+
+.desc span{
+  /* float: right; */
+  font-size: 40px;
+  margin-right: 0px;
+  font-weight: 400;
+  text-transform: capitalize;
+  transform: rotate(270deg);
+  padding: 0px;
+  position: absolute;
+  right: -35px;
+  margin-bottom: 0px;
+
+}
+
+.weather{
+  font-size: 50px;
+  font-style: bold;
+  color: rgba(255,255,255,0.9);
+}
+
+.cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-heading{
+  font-size: 14px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.desc{
+  /* background-color: ; */
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+.card{
+  background-color: rgba(255, 255, 255,0.2);
+  padding: 10px;
+ 
+  /* width: 20vw;
+  height: 20vh; */
+  /* width:95px;
+  height: 100px; */
+
+  
+  font-size: small;
+  margin-right: 10px;
+  border-radius: 10%;
+  color: rgb(255, 255, 255);
 }
 
-.App-link {
-  color: #61dafb;
+.card p{
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
