@@ -1,5 +1,6 @@
 body{
   position: absolute;
+  margin:3px;
   z-index: -1;
   background-image: url(./images/mounts.jpg);
   object-fit: cover;
@@ -24,8 +25,9 @@ body{
   /* align-items: center; */
   flex-direction: column;
   justify-content: space-between;
-  width: 99vw;
+  width: 99.3vw;
   height:85vh;
+  /* background-color: black; */
   margin-left: 3px;
 }
 
@@ -38,6 +40,7 @@ body{
 }
 ::placeholder{
   font-weight: 600;
+  text-align: center;
   /* font-size: ; */
   color: rgb(61, 58, 58,0.7);
 }
@@ -66,16 +69,33 @@ body{
   text-transform: capitalize;
   transform: rotate(270deg);
   padding: 0px;
-  position: absolute;
-  right: -35px;
+  position: fixed;
+  /* right: -70px; */
+   font-size: 30px;
   margin-bottom: 0px;
-
 }
 
+.hint{
+  width:95vw;
+
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: rgb(255, 255, 0,0.8);
+  font-size: 15px;
+
+}
 .weather{
   font-size: 50px;
   font-style: bold;
   color: rgba(255,255,255,0.9);
+}
+.flex-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards{
@@ -117,5 +137,13 @@ body{
   font-size: 18px;
 }
 
+.backdrop{
+  width:500px;
+  /* height: 0px; */
+}
+
+.back{
+  background-color: black;
+}
 
 

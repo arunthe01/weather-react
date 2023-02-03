@@ -6,6 +6,7 @@ import axios from 'axios'
 function App() {
   const [data, setdata] = useState({})
   const [location, setLoc] = useState('')
+  const [b, setB] = useState(true);
 
 
 
@@ -16,6 +17,7 @@ function App() {
   const search = (e) => {
     if (e.key === 'Enter') {
       axios.get(url).then((response) => {
+        setB(false);
         setdata(response.data)
         console.log(response.data);
       })
@@ -31,8 +33,16 @@ function App() {
 
 
   return (
+
+    // b?<div className='hint'>ENTER LOCATION TO FIND WEATHER</div>
+
+
+
     <div className="App">
 
+
+      
+      {/* <video autoPlay loop muted plays-inline className='backdrop'> <source src='./images/clouds_video.mp4' /></video> */}
 
       <div className="search">
 
@@ -40,60 +50,79 @@ function App() {
 
       </div>
 
-
-      <div className="container">
-        <div className='city-details'>
-          <h1 className='city'>{data.name}</h1>
-
-          <h1 className='weather'> {data.main ? data.main.temp + "°C" : null}</h1>
-        </div>
-
-        
+      {
 
 
-        <div className='desc'>
+        b ? <div className='hint'>ENTER LOCATION TO KNOW THE WEATHER</div>
+          : <div>
 
-          { data.weather && data.weather[0].main?<span>{data.weather[0].main}</span>:null }
+            <div className="container">
+
+              <div className='flex-container'>
+                <div className='city-details'>
+                  <h1 className='city'>{data.name}</h1>
+
+                  <h1 className='weather'> {data.main ? data.main.temp + "°C" : null}</h1>
+                </div>
+
+                <div className='desc'>
+
+                  {data.weather && data.weather[0].main ? <span>{data.weather[0].main}</span> : null}
+
+                </div>
+
+
+              </div>
+
+
+
+              {/* <div className='desc'>
+
+          { data.weather && data.weather[0].description?<span>{data.weather[0].description}</span>:null }
           
-        </div>
+        </div> */}
 
 
-        <div className='cards'>
+              <div className='cards'>
 
 
-          {data.main && data.main.feels_like ? <div className='card'>
-            {/* <h1 className='card-heading'>Feels <br/> Like</h1> */}
-            <h1 className='card-heading'> Feels Like</h1>
-            <p>{data.main.feels_like}°C</p>
-          </div> : null
-          }
-
-
-          {data.main && data.main.temp_max ? <div className='card'>
-            {/* <h1 className='card-heading'>Max<br/>Temp</h1> */}
-            <h1 className='card-heading'> Max-Temp</h1>
-            <p>{data.main.temp_max} °C</p>
-          </div> : null
-          }
-
-          {data.wind && data.wind.speed ? <div className='card'>
-            {/* <h1 className='card-heading'>Min <br/> Temp</h1> */}
-            <h1 className='card-heading'> Wind Speed</h1>
-            <p>{data.wind.speed}°C</p>
-          </div> : null
-
-          }
+                {data.main && data.main.feels_like ? <div className='card'>
+                  {/* <h1 className='card-heading'>Feels <br/> Like</h1> */}
+                  <h1 className='card-heading'> Feels Like</h1>
+                  <p>{data.main.feels_like}°C</p>
+                </div> : null
+                }
 
 
 
 
+                {data.main && data.main.temp_max ? <div className='card'>
+                  {/* <h1 className='card-heading'>Max<br/>Temp</h1> */}
+                  <h1 className='card-heading'> Max-Temp</h1>
+                  <p>{data.main.temp_max} °C</p>
+                </div> : null
+                }
+
+                {data.wind && data.wind.speed ? <div className='card'>
+                  {/* <h1 className='card-heading'>Min <br/> Temp</h1> */}
+                  <h1 className='card-heading'> Wind Speed</h1>
+                  <p>{data.wind.speed}°C</p>
+                </div> : null
+
+                }
 
 
-        </div>
 
 
-      </div>
 
+
+              </div>
+
+
+            </div>
+
+          </div>
+      }
     </div>
   );
 }
