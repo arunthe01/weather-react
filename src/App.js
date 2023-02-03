@@ -41,7 +41,7 @@ function App() {
     <div className="App">
 
 
-      
+
       {/* <video autoPlay loop muted plays-inline className='backdrop'> <source src='./images/clouds_video.mp4' /></video> */}
 
       <div className="search">
