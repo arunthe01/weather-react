@@ -1,6 +1,5 @@
 body{
   position: absolute;
-  margin:3px;
   z-index: -1;
   background-image: url(./images/mounts.jpg);
   object-fit: cover;
