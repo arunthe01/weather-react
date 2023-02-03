@@ -10,7 +10,7 @@ function App() {
 
 
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=fbc35f84a2086b5837c7e7d7358a7368&units=metric`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location.trim()}&appid=fbc35f84a2086b5837c7e7d7358a7368&units=metric`
 
 
 

@@ -4,6 +4,7 @@ body{
   background-image: url(./images/mounts.jpg);
   object-fit: cover;
   color: rgba(255, 255, 255,0.8);
+  margin: 20px;
   background-position: cover center ;
   /* background-repeat: no-repeat; */
 }
@@ -12,6 +13,7 @@ body{
   width: 95vw;
   margin: 10px;
    display: flex;
+   
    align-items: center;
    justify-content: center;
 
@@ -24,8 +26,8 @@ body{
   /* align-items: center; */
   flex-direction: column;
   justify-content: space-between;
-  width: 99.3vw;
-  height:85vh;
+  width: 96vw;
+  height:80vh;
   /* background-color: black; */
   margin-left: 3px;
 }
